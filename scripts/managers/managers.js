@@ -1,5 +1,6 @@
-define(["./skillManager"], function(skillManager) {
+define(["./skillManager", "./reagentManager"], function(skillManager, reagentManager) {
     return {
-        SkillManager: skillManager
+        SkillManager  : skillManager,
+        ReagentManager: reagentManager
     };
 });

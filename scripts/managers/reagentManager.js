@@ -1,5 +1,6 @@
+define(["common"], function() {
+
 var ReagentManager = function() {
-    
     var reagentQueue = [];
     var reagentQueueSize = 3;
     
@@ -17,14 +18,15 @@ var ReagentManager = function() {
             return reagentQueue;
         } else {
             var mappedReagentQueue = [];
+
             reagentQueue.forEach(function(value){
                 mappedReagentQueue.push(reagentsMap[value]);
             });
+
             return mappedReagentQueue;
         } 
       
     };
-    
     
     return {
       activateReagent : activateReagent,
@@ -32,14 +34,6 @@ var ReagentManager = function() {
     };
 };
 
+return ReagentManager;
 
-var reagents = {
-	Quas : "Quas",
-	Wex  : "Wex",
-	Exort: "Exort"
-};
-
-var reagentsMap = {};
-reagentsMap[reagents.Quas] = "Q";
-reagentsMap[reagents.Wex]  = "W";
-reagentsMap[reagents.Exort]= "E";
+});
