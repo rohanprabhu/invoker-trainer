@@ -1,0 +1,15 @@
+body, table, strong, td, tr, div {
+	padding: 0px;
+	margin: 0px;
+}
+
+.reagents {
+	width: 100px;
+	height: 100px;
+	background: #000000;
+	display: inline-block;
+	margin: 10px;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 60px;
+}

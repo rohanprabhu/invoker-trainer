@@ -26,11 +26,17 @@ var SkillManager = function() {
 
     var invoke = function(reagentString) {
     	if(reagentString in skillsMap) {
-    		if(skillSet.length === config.maximumSkills) {
-    			skillSet = skillSet.slice(1);
-    		}
+    		var idx = skillSet.indexOf(skillsMap[reagentString]);
 
-    		skillSet.push(skillsMap[reagentString]);
+    		if(idx != -1) {
+    		    skillSet = [skillSet[idx]].concat(skillSet.slice(0, idx).concat(skillSet.slice(idx+1)));
+    		} else {
+    			if(skillSet.length === config.maximumSkills) {
+    			    skillSet = skillSet.slice(1);
+    		    }
+
+    			skillSet.push(skillsMap[reagentString]);
+    		}
     	}
     };
 
