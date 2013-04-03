@@ -20,6 +20,11 @@ var Skills = {
     SunStrike: "SunStrike"
 };
 
+var Channels = {
+    InvokeChannel: "InvokeChannel",
+    ReagentChannel: "ReagentChannel"
+};
+
 var ReagentsMap = (function() {
 	var _reagentsMap = {};
 

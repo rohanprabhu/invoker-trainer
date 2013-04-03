@@ -7,10 +7,13 @@
 	Original is (c) Dojo Foundation 2004-2010. Released under either AFL or new BSD, see:
 	http://dojofoundation.org/license for more information.
 
+	Extensions by: Rohan Prabhu <rohan@rohanprabhu.com>
+	    Ability to pass a `this` object and notify function.
+	    Copyright under Creative Commons Attributions-ShareAlike
+
 */	
 
 ;(function(d){
-
 	// the topic/subscription hash
 	var cache = {};
 
@@ -29,11 +32,17 @@
 		//
 		//	|		$.publish("/some/topic", ["a","b","c"]);
 		cache[topic] && d.each(cache[topic], function(){
-			this.apply(d, args || []);
+			this[0].apply(this[1] || d, args || []);
 		});
 	};
 
-	d.subscribe = function(/* String */topic, /* Function */callback){
+	d.notify = function(/* String */topic) {
+		cache[topic] && d.each(cache[topic], function() {
+			this[0].call(this[1] || d);
+		});
+	};
+
+	d.subscribe = function(/* String */topic, /* Function */callback, /* Object */thisObject) {
 		// summary:
 		//		Register a callback on a named topic.
 		// topic: String
@@ -52,11 +61,11 @@
 		if(!cache[topic]){
 			cache[topic] = [];
 		}
-		cache[topic].push(callback);
-		return [topic, callback]; // Array
+		cache[topic].push([callback, thisObject]);
+		return [topic, [callback, thisObject]]; // Array
 	};
 
-	d.unsubscribe = function(/* Array */handle){
+	d.unsubscribe = function(/* Array */handle) {
 		// summary:
 		//		Disconnect a subscribed function for a topic.
 		// handle: Array
