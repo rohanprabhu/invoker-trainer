@@ -13,19 +13,20 @@ var ReagentManager = function() {
         }
     };
     
-    var getReagentQueue = function(reagentsMap) {
-        if (typeof reagentsMap === "undefined") {
-            return reagentQueue;
-        } else {
-            var mappedReagentQueue = [];
+    var getReagentQueueShort = function() {
+        var reagentsMap = ReagentsMap;
+	var mappedReagentQueue = [];
 
-            reagentQueue.forEach(function(value){
-                mappedReagentQueue.push(reagentsMap[value]);
-            });
+        reagentQueue.forEach(function(value){
+           mappedReagentQueue.push(reagentsMap[value]);
+        });
 
-            return mappedReagentQueue;
-        } 
+        return mappedReagentQueue;
+    }; 
       
+
+    var getReagentQueue = function() {
+	return reagentQueue;
     };
     
     return {
