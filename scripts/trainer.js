@@ -45,7 +45,7 @@ require(["libs/deedee", "managers/managers", "common"], function(a, Managers) {
 	});
 
 	$("#invoke").click(function() {
-		skillManager.invoke(reagentManager.getReagentQueue(ReagentsMap).join());
+		skillManager.invoke(reagentManager.getReagentQueueShort().join());
 		console.log(to(skillManager.getCurrentInvocation()));
 	});
 

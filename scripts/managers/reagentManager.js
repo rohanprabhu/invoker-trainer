@@ -15,7 +15,7 @@ var ReagentManager = function() {
     
     var getReagentQueueShort = function() {
         var reagentsMap = ReagentsMap;
-	var mappedReagentQueue = [];
+	    var mappedReagentQueue = [];
 
         reagentQueue.forEach(function(value){
            mappedReagentQueue.push(reagentsMap[value]);
@@ -31,7 +31,8 @@ var ReagentManager = function() {
     
     return {
       activateReagent : activateReagent,
-      getReagentQueue : getReagentQueue
+      getReagentQueue : getReagentQueue,
+      getReagentQueueShort : getReagentQueueShort
     };
 };
 
