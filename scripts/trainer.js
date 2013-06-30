@@ -66,7 +66,7 @@ require(["libs/deedee", "managers/managers", "common"], function(a, Managers) {
 	});
 
 	$("#invoke").click(function() {
-		skillManager.invoke(reagentManager.getReagentQueue(ReagentsMap).join());
+		skillManager.invoke(reagentManager.getReagentQueueShort(ReagentsMap).join());
 
 		for(var i=0; i<skillClassList.length; i++) {
 			$("#skill_a").removeClass(skillClassList[i]);

@@ -26,7 +26,7 @@ var ReagentManager = function() {
       
 
     var getReagentQueue = function() {
-	return reagentQueue;
+	    return reagentQueue;
     };
     
     return {
