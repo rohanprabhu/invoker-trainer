@@ -1,6 +1,7 @@
 body, table, strong, td, tr, div {
 	padding: 0px;
 	margin: 0px;
+	font-family: Helvetica, Verdana, Arial, sans-serif;
 }
 
 .reagents {
@@ -11,5 +12,76 @@ body, table, strong, td, tr, div {
 	margin: 10px;
 	color: #FFFFFF;
 	text-align: center;
-	font-size: 60px;
+	box-shadow: rgba(0,0,0,0.2) 0px 2px 3px, inset rgba(0,0,0,0.2) 0px -1px 2px;
+	border: 1px solid #FFFFFF;
+}
+
+.reagents > .hotkey {
+	font-size: 10pt;
+	text-align: center;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	float: right;
+	background: rgba(255, 255, 255, 0.4);
+	color: #000000;
+	width: 12pt;
+	height: 12pt;
+	border-top: none;
+	border-right: none;
+	font-weight: bold;
+}
+
+#quas {
+	background: url("./../images/reagents/quas.png");
+}
+
+#wex {
+	background: url("./../images/reagents/wex.png");
+}
+
+#exort {
+	background: url("./../images/reagents/exort.png");
+}
+
+#invoke {
+	background: url("./../images/skills/invoke.png");
+}
+
+.cold_snap {
+	background: url("./../images/skills/cold_snap.png");
+}
+
+.ghost_walk {
+	background: url("./../images/skills/ghost_walk.png");
+}
+
+.ice_wall {
+	background: url("./../images/skills/ice_wall.png");
+}
+
+.tornado {
+	background: url("./../images/skills/tornado.png");
+}
+
+.deafening_blast {
+	background: url("./../images/skills/deafening_blast.png");
+}
+
+.emp {
+	background: url("./../images/skills/emp.png");
+}
+
+.forge_spirit {
+	background: url("./../images/skills/forge_spirit.png");
+}
+
+.alacrity {
+	background: url("./../images/skills/alacrity.png");
+}
+
+.chaos_meteor {
+	background: url("./../images/skills/chaos_meteor.png");
+}
+
+.sun_strike {
+	background: url("./../images/skills/sun_strike.png");
 }
