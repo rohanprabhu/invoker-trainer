@@ -25,6 +25,7 @@ var Channels = {
     ReagentChannel: "ReagentChannel"
 };
 
+
 var ReagentsMap = (function() {
 	var _reagentsMap = {};
 
