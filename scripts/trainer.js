@@ -41,6 +41,7 @@ require(["libs/deedee", "managers/managers", "common"], function(a, Managers) {
 
 	var skillManager = new Managers.SkillManager();
 	var reagentManager = new Managers.ReagentManager();
+	window.challengeManager = new Managers.ChallengeManager();
 
     var reagentKeyMap = {
     	"quas": Reagents.Quas,
